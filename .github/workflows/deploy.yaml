@@ -14,11 +14,22 @@ jobs:
       cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
+      - name: Install and configure the Koyeb CLI
+        uses: koyeb-community/install-koyeb-cli@v2
+        with:
+          api_token: "${{ secrets.KOYEB_EXAMPLES_APPS_TOKEN }}"
+
+      - name: Create application secret
+        uses: koyeb/action-git-deploy/secret@v1
+        with:
+          secret-name: LARAVEL_APP_KEY
+          secret-value: "${{ secrets.APP_KEY }}"
+
       - name: Build and deploy the application
         uses: koyeb/action-git-deploy@v1
         with:
           app-name: laravel-${{ github.ref_name }}
           api-token: "${{ secrets.KOYEB_EXAMPLES_APPS_TOKEN }}"
-          service-env: "APP_KEY=${{ secrets.APP_KEY }}"
+          service-env: "APP_KEY=@LARAVEL_APP_KEY"
           service-ports: "80:http"
           service-routes: "/:80"
