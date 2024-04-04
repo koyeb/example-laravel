@@ -50,12 +50,11 @@ Alternatively, you can manually create the application as described below.
 
 First, generate an APP_KEY to properly secure user sessions and other encrypted data by running in your terminal: `php artisan key:generate --show`
 
-On the [Koyeb Control Panel](//app.koyeb.com/apps), click the **Create App** button to go to the App creation page.
+On the [Koyeb Control Panel](//app.koyeb.com/apps), on the **Overview** tab, click the **Create Web Service** button to begin.
 
-1. Select `GitHub` as the deployment method to use
-2. In the repositories list, select the repository you just forked
-3. Specify the branch to deploy, in this case `main`
-4. Then, give your App a name, i.e `laravel-on-koyeb`, and click **Create App.**
+1. Select **GitHub** as the deployment method.
+2. In the repositories list, select the repository you just forked.
+3. Choose a name for your App and Service, for example `laravel-on-koyeb`, and click **Deploy**.
 
 You land on the deployment page where you can follow the build of your Laravel application. Once the build is completed, your application is being deployed and you will be able to access it via `<YOUR_APP_NAME>-<YOUR_ORG_NAME>.koyeb.app`.
 
