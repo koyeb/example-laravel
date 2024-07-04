@@ -50,7 +50,7 @@ Alternatively, you can manually create the application as described below.
 
 First, generate an APP_KEY to properly secure user sessions and other encrypted data by running in your terminal: `php artisan key:generate --show`
 
-On the [Koyeb Control Panel](//app.koyeb.com/apps), on the **Overview** tab, click the **Create Web Service** button to begin.
+On the [Koyeb Control Panel](https://app.koyeb.com/), on the **Overview** tab, click the **Create Web Service** button to begin.
 
 1. Select **GitHub** as the deployment method.
 2. In the repositories list, select the repository you just forked.
